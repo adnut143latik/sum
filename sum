@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+
+    public static float addition(float a, float b){
+        return a+b;
+    }
+    public static void main (String[] args){
+        Scanner inputs = new Scanner(System.in);
+
+        System.out.println("Enter the 1st number >> ");
+        float input1 = inputs.nextFloat();
+
+        System.out.println("Enter the 2nd number >> ");
+        float input2 = inputs.nextFloat();
+
+        System.out.println("The sum of " + input1 + " and " + input2 + " is " + addition(input1, input2));
+        inputs.close();
+    }
+}
