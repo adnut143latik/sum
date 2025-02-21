@@ -1,0 +1,52 @@
+import java.util.*;
+class Employee{
+    private String name;
+    private float salary;
+    private String dept;
+
+    public String getName(){
+        return name;
+    }
+    public float getSalary(){
+        return salary;
+    }
+    public String getDept(){
+        return dept;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setSalary(float Salary){
+        this.salary = Salary;
+    }
+    public void setDept(String dept){
+        this.dept = dept;
+    }
+    
+    
+    public void display_info(){
+        System.out.println("Employee: " + name + " Salary: " + "$" + salary + " Department: " + dept);
+    }
+}
+
+public class Main {
+    public static void main (String[] args){
+        Scanner employee_details = new Scanner(System.in);
+
+        System.out.print("Enter Employee's name: ");
+        String name1 = employee_details.nextLine();
+
+        System.out.print("Enter salary: ");
+        float salary1 = employee_details.nextFloat();
+        employee_details.nextLine();
+        System.out.print("Department of the employee: ");
+        String dept1 = employee_details.nextLine();
+
+        Employee first_emp = new Employee();
+        first_emp.setName(name1);
+        first_emp.setSalary(salary1);
+        first_emp.setDept(dept1);
+        first_emp.display_info();
+        employee_details.close();
+    }
+}
